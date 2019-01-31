@@ -94,7 +94,7 @@ echo "$@"
 #
 # ADD YOUR CODE BELOW:
 
-##
+##below will print the name of any leading directory while also removing any suffixs
 
 for $@
 do
