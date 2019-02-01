@@ -95,8 +95,11 @@ echo "$@"
 # ADD YOUR CODE BELOW:
 
 ##below will print the name of any leading directory while also removing any suffixs
+##The grep command will locate all lines with "Negros" as this is the common word between all species and pipe that into wc to count the number of lines
+##this should give a picture of how many "samples" we may have in the file sets
 
 for $@
 do
 	basename -a example-seqs1.fasta example-seqs2.fasta
+	grep -e "Negros" | wc -l example-seqs1.fasta example-seqs2.fasta
 done
