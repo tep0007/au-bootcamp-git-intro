@@ -3,7 +3,10 @@
 # How this script should behave:
 #
 # INPUT:   Paths to one or more fasta sequence files
-./example-seqs1.fasta
+
+#./example-seqs1.fasta
+# Not sure what this is doing here ^^
+
 # OUTPUT:  For each file, it should write a line with the number of sequences
 #          in the file, a space, and then the file NAME (NOT the path!), and a
 #          final line with the total number of sequences across all files.
@@ -98,8 +101,15 @@ echo "$@"
 ##The grep command will locate all lines with "Negros" as this is the common word between all species and pipe that into wc to count the number of lines
 ##this should give a picture of how many "samples" we may have in the file sets
 
-for $@
+# modified "for do done" statement
+for file in "$@"
 do
-	basename -a example-seqs1.fasta example-seqs2.fasta
-	grep -e "Negros" | wc -l example-seqs1.fasta example-seqs2.fasta
+#####	basename -a example-seqs1.fasta example-seqs2.fasta
+#####	grep -e "Negros" | wc -l example-seqs1.fasta example-seqs2.fasta
+	Num=`grep '>' $file | wc -l`
+	filename=`basename $file`
+	echo $NUM $filename
 done
+
+Final=`grep '>' $@ | wc -l`
+echo $Final
