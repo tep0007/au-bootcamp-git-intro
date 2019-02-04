@@ -6,6 +6,7 @@
 
 #./example-seqs1.fasta
 # Not sure what this is doing here ^^
+# The plan for the file above is that would be an input sequence. This may be an incorrect way to do it, however.
 
 # OUTPUT:  For each file, it should write a line with the number of sequences
 #          in the file, a space, and then the file NAME (NOT the path!), and a
