@@ -67,6 +67,7 @@
 # files that were 'given to' this script. The variable "$@" will be very useful
 # for this. Let's take a look at what it gives us:
 
+#Prints the value given to @...I think
 echo "$@"
 
 # How are you going to work with each file path?
