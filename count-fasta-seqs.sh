@@ -110,7 +110,7 @@ do
 #####	grep -e "Negros" | wc -l example-seqs1.fasta example-seqs2.fasta
 	Num=`grep '>' $file | wc -l`
 	filename=`basename $file`
-	echo $NUM $filename
+	echo $Num $filename
 done
 
 Final=`grep '>' $@ | wc -l`
